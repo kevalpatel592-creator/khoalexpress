@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Khoal Express Service | Same Day Delivery</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#111827;background:linear-gradient(135deg,#f8fafc,#eef2ff);line-height:1.6}header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 6%;background:rgba(255,255,255,.86);backdrop-filter:blur(16px);border-bottom:1px solid #e5e7eb}.brand{font-weight:900;font-size:1.15rem;color:#312e81}.btn{display:inline-block;text-decoration:none;border:0;border-radius:14px;padding:13px 22px;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;font-weight:800;box-shadow:0 10px 25px #4f46e533;cursor:pointer}.btn.small{padding:9px 15px}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:75px 6%;max-width:1200px;margin:auto}.badge{display:inline-block;padding:7px 12px;border-radius:999px;background:#ede9fe;color:#6d28d9;font-weight:800;font-size:.78rem}.hero h1{font-size:clamp(2.2rem,5vw,4.3rem);line-height:1.08;margin:18px 0}.hero h1 span{background:linear-gradient(90deg,#4f46e5,#ec4899);-webkit-background-clip:text;color:transparent}.hero p{font-size:1.08rem;color:#64748b}.route-card,.section,.features>div{background:rgba(255,255,255,.9);border:1px solid #e5e7eb;border-radius:24px;box-shadow:0 18px 45px #312e8112}.route-card{padding:32px;text-align:center;font-weight:800}.line{color:#6366f1;margin:25px 0}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:0 6%;max-width:1200px;margin:0 auto 50px}.features>div{padding:20px}.features b,.features small{display:block}.features small{color:#64748b}.section{max-width:1000px;margin:30px auto;padding:34px}.section.light{background:linear-gradient(135deg,#eef2ff,#fff)}h2{font-size:1.8rem;margin-top:0}.muted,.note{color:#64748b}form{display:grid;grid-template-columns:1fr 1fr;gap:18px}label{font-weight:700}input,select{width:100%;margin-top:7px;padding:13px;border:1px solid #dbe1ea;border-radius:12px;background:#fff;font:inherit}.estimate{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;padding:18px;border-radius:16px;background:#f5f3ff}.estimate strong{font-size:1.7rem;color:#4f46e5}.full{grid-column:1/-1;width:100%}.prices{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.prices>div{text-align:center;padding:28px;border-radius:20px;background:#fff;border:1px solid #ddd6fe;box-shadow:0 10px 30px #4f46e51a}.prices b{display:block;font-size:2.2rem;color:#4f46e5}.prices span{color:#64748b}.whatsapp{background:#16a34a;margin-left:10px}.secondary{margin-right:8px}footer{text-align:center;padding:30px;color:#64748b}@media(max-width:750px){.hero{grid-template-columns:1fr;padding-top:45px}.features{grid-template-columns:1fr 1fr}form{grid-template-columns:1fr}.section{margin:20px 4%;padding:24px}.prices{grid-template-columns:1fr}.whatsapp{margin:10px 0 0}header{padding:14px 4%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">🚚 Khoal Express Service</div>
+  <a href="#book" class="btn small">Book Now</a>
+</header>
+
+<section class="hero">
+  <div>
+    <span class="badge">SAME-DAY DELIVERY</span>
+    <h1>Ahmedabad થી Baroda<br><span>Same Day Delivery</span></h1>
+    <p>Parcel pickup કરાવો અને એ જ દિવસે Baroda પહોંચાડો.</p>
+    <a href="#book" class="btn">📦 Delivery Book કરો</a>
+  </div>
+  <div class="route-card">
+    <div>📍 Ahmedabad</div>
+    <div class="line">● ───────── 🚚 ───────── ●</div>
+    <div>📍 Baroda (Vadodara)</div>
+  </div>
+</section>
+
+<section class="features">
+  <div>⚡ <b>Same Day</b><small>ઝડપી delivery</small></div>
+  <div>📍 <b>Door to Door</b><small>Pickup & delivery</small></div>
+  <div>📱 <b>Easy Booking</b><small>Mobileથી booking</small></div>
+  <div>🔒 <b>Safe Parcel</b><small>સાવચેતીપૂર્વક handling</small></div>
+</section>
+
+<section id="book" class="section">
+<h2>📦 Delivery Booking</h2>
+<p class="muted">તમારી વિગતો ભરો અને delivery charge જુઓ.</p>
+<form id="bookingForm">
+  <label>Customer Name
+    <input id="name" required placeholder="તમારું નામ">
+  </label>
+  <label>Mobile Number
+    <input id="phone" required type="tel" inputmode="numeric" pattern="[0-9]{10}" placeholder="10 digit mobile">
+  </label>
+  <label>Receiver Name
+    <input id="receiverName" required placeholder="Receiver name">
+  </label>
+  <label>Receiver Mobile Number
+    <input id="receiverPhone" required type="tel" inputmode="numeric" pattern="[0-9]{10}" placeholder="10 digit mobile">
+  </label>
+  <label>Pickup Location
+    <div class="map-field">
+      <input id="pickup" required placeholder="Pickup address">
+      <a id="pickupMap" class="btn small map-btn" href="https://www.google.com/maps/search/?api=1&query=Ahmedabad" target="_blank" rel="noopener">📍 Google Map</a>
+    </div>
+  </label>
+  <label>Drop Location
+    <div class="map-field">
+      <input id="drop" required placeholder="Drop address">
+      <a id="dropMap" class="btn small map-btn" href="https://www.google.com/maps/search/?api=1&query=Vadodara" target="_blank" rel="noopener">📍 Google Map</a>
+    </div>
+  </label>
+  <label>Parcel Type
+    <select id="parcel">
+      <option value="document">Document / Envelope</option>
+      <option value="small">Small Parcel</option>
+      <option value="medium">Medium Parcel</option>
+    </select>
+  </label>
+  <label>Pickup Date
+    <input id="date" required type="date">
+  </label>
+  <label>Pickup Time
+    <select id="time">
+      <option>9:00 AM – 11:00 AM</option>
+      <option>11:00 AM – 1:00 PM</option>
+    </select>
+  </label>
+  <div class="estimate">
+    <span>Estimated delivery charge</span>
+    <strong id="price">₹399</strong>
+  </div>
+  <button class="btn full" type="submit">WhatsApp પર Booking મોકલો</button>
+</form>
+<div id="result" class="result hidden"></div>
+</section>
+
+<section class="section light">
+<h2>💰 Simple Pricing</h2>
+<div class="prices"><div><b>₹399</b><span>Delivery Charge</span></div></div>
+</section>
+
+<section class="section">
+<h2>📞 Need Help?</h2>
+<p>Booking અથવા delivery માટે અમારો સંપર્ક કરો.</p>
+<a class="btn secondary" href="tel:+917984430332">📞 Call Now</a>
+<a class="btn whatsapp" href="https://wa.me/917984430332">💬 WhatsApp</a>
+</section>
+
+<footer>© 2026 Khoal Express Service · Same Day Delivery</footer>
+<script>
+const weight=document.getElementById('weight'), price=document.getElementById('price');
+weight.addEventListener('change',()=>price.textContent='₹'+weight.value);
+document.getElementById('bookingForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const msg=`Khoal Express Service Booking%0AName: ${name.value}%0AMobile: ${phone.value}%0APickup: ${pickup.value}%0ADrop: ${drop.value}%0AWeight: ${weight.options[weight.selectedIndex].text}%0APrice: ${price.textContent}%0ADate: ${date.value}%0ATime: ${time.value}`;
+ window.open('https://wa.me/917984430332?text='+msg,'_blank');
+});
+</script>
+
+<script>
+(function () {
+  const pickup = document.getElementById('pickup');
+  const drop = document.getElementById('drop');
+  const pickupMap = document.getElementById('pickupMap');
+  const dropMap = document.getElementById('dropMap');
+
+  function updateMap(input, link, fallback) {
+    const value = input.value.trim();
+    const query = value || fallback;
+    link.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(query);
+  }
+
+  if (pickup && pickupMap) pickup.addEventListener('input', () => updateMap(pickup, pickupMap, 'Ahmedabad'));
+  if (drop && dropMap) drop.addEventListener('input', () => updateMap(drop, dropMap, 'Vadodara'));
+})();
+</script>
+
+</body>
+</html>
